@@ -1,0 +1,13 @@
+body {
+    display: flex;
+    align-items:baseline;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #2f2e2e;
+    }
+
+#title {
+    text-align: center;
+    color: whitesmoke;
+    }

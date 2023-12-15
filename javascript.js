@@ -12,7 +12,9 @@ function playRound(playerSelection, computerSelection) {
 
     // Check for valid player selection
     if (!['rock', 'paper', 'scissors'].includes(playerSelection)) {
-        return 'Invalid choice. Please choose rock, paper, or scissors.';
+        alert('Invalid choice. Please choose rock, paper, or scissors.');
+        return playRound(prompt('Enter your choice: rock, paper, or scissors'), getComputerChoice());
+
     }
 
     // Display player and computer choices
@@ -23,6 +25,7 @@ function playRound(playerSelection, computerSelection) {
     if (playerSelection === computerSelection.toLowerCase()) {
         // It's a tie, re-play the round
         console.log('It\'s a tie! Re-play the round.');
+        alert('It\'s a tie! Re-play the round.')
         return playRound(prompt('Enter your choice: rock, paper, or scissors'), getComputerChoice());
     } else if (
         (playerSelection === 'rock' && computerSelection === 'Scissors') ||
@@ -43,9 +46,9 @@ function game() {
         const playerSelection = prompt('Enter your choice: rock, paper, or scissors');
         const computerSelection = getComputerChoice();
         console.log(playRound(playerSelection, computerSelection));
+        alert(playRound(playerSelection, computerSelection))
     }
 }
 
 // Start the game
 game();
-
